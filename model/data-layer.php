@@ -5,12 +5,6 @@ function validName($name){
 }
 
 function validAnswer($args){
-    foreach($args as $arg){
-        if(arg != "This midterm is easy in difficulty" &&
-        arg != "This midterm is medium in difficulty" &&
-        arg != "This midterm is hard in difficulty")
-        return false;
-    }
-    return true;
-
+    $arr = array("This midterm is easy in difficulty", "This midterm is medium in difficulty", "This midterm is hard in difficulty");
+    return in_array($args, $arr);
 }

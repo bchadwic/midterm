@@ -37,7 +37,7 @@ $f3->route('GET|POST /survey', function($f3) {
             $f3->set('error["name"]', "Please fill in a name");
         }
 
-        if(empty($f3->get('error'))){
+        if(empty($f3->get('error'))) {
             $f3->reroute('/summary');
         }
     }
@@ -46,7 +46,7 @@ $f3->route('GET|POST /survey', function($f3) {
 });
 
 
-$f3->route('POST /summary', function($f3) {
+$f3->route('POST /summary', function() {
 
     $view = new Template();
     echo $view->render('views/summary.html');
