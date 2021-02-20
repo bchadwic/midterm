@@ -17,9 +17,14 @@ $f3->route('GET /', function() {
     echo $view->render('views/survey.html');
 });
 
-$f3->route('GET /survey', function() {
+$f3->route('GET|POST /survey', function() {
     $view = new Template();
     echo $view->render('views/survey-start.html');
+});
+
+$f3->route('POST /summary', function() {
+    $view = new Template();
+    echo $view->render('views/summary.html');
 });
 
 //Run fat free
