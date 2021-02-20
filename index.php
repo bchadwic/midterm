@@ -22,7 +22,12 @@ $f3->route('GET|POST /survey', function() {
     echo $view->render('views/survey-start.html');
 });
 
+
 $f3->route('POST /summary', function() {
+    if(isset($_POST)){
+        $_SESSION['name'] = $_POST['name'];
+        $_SESSION['answers'] = $_POST['midterm'];
+    }
     $view = new Template();
     echo $view->render('views/summary.html');
 });

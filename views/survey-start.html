@@ -4,17 +4,17 @@
 <div class="text-center container">
     <h1 class="display-4"><b>Midterm Survey</b></h1>
     <br>
-    <form action="" method="post">
+    <form action="summary" method="post">
         <label for="name">Name</label>
-        <input type="text" id="name">
+        <input type="text" id="name" name="name">
         <p>Check all that apply:</p>
-        <input id="easy" type="checkbox" name="midterm">
+        <input id="easy" type="checkbox" name="midterm[]" value="This midterm is easy in difficulty">
         <label for="easy">This midterm is easy in difficulty?</label>
         <br>
-        <input id="medium" type="checkbox" name="midterm">
+        <input id="medium" type="checkbox" name="midterm[]" value="This midterm is medium in difficulty">
         <label for="medium">This midterm is medium in difficulty?</label>
         <br>
-        <input id="hard" type="checkbox" name="midterm">
+        <input id="hard" type="checkbox" name="midterm[]" value="This midterm is hard in difficulty">
         <label for="hard">This midterm is hard in difficulty</label>
         <br>
         <button class="btn btn-success" type="submit">Submit!</button>

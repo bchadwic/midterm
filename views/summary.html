@@ -1,8 +1,16 @@
-<includes href="includes/header.html"></includes>
+<include href="includes/header.html"></include>
 <body>
-
-<h1 class="display-4"><b>Midterm Survey</b></h1>
-<h2 class="display-3">Thank you for taking the survey</h2>
-
+<div class="container text-center">
+    <h1 class="display-4"><b>Midterm Survey</b></h1>
+    <br>
+    <h4>Thank you for taking the survey, {{ @SESSION.name }}</h4>
+    <br>
+    <h4>Your Answers:</h4>
+    <p>
+    <repeat group="{{ @SESSION.answers }}" value="{{ @value }}" counter="{{ @count }}">
+        {{ @value }}<check if="{{ @count!=count(@SESSION.answers) }}">,</check>
+    </repeat>
+    </p>
+</div>
 </body>
 </html>
